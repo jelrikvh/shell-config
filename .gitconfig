@@ -1,0 +1,27 @@
+[core]
+        excludesfile = /Users/jelrikvh/.gitignore_global
+        autocrlf = input
+[alias]
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset' --abbrev-commit
+        stat = status
+        pr = "!pr() { git fetch upstream refs/pull/$1/head:refs/remotes/upstream/pr/$1; git checkout upstream/pr/$1; }; pr"
+
+[color]
+        ui = auto
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+[color "status"]
+        added = magenta
+        updated = yellow
+        deleted = red blink
+        changed = green
+        untracked = cyan
+[push]
+        default = nothing
